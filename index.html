@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b5f8a">
+  <meta name="description" content="社会第一课：面向大学生的就业与生活辅导，含合同协议自检。">
+  <title>社会第一课 · 就业与生活辅导</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="wrap">
+      <h1 class="app-title" id="appName">社会第一课</h1>
+      <p class="app-sub"><span id="appTagline">合同先看，坑先避</span> · <span id="schoolName">样例校</span></p>
+    </div>
+  </header>
+
+  <nav class="tabbar" role="tablist" aria-label="主要功能">
+    <div class="wrap tabbar-inner">
+      <button class="tab is-active" role="tab" aria-selected="true" data-view="qa">问答</button>
+      <button class="tab" role="tab" aria-selected="false" data-view="contract">合同自检</button>
+      <button class="tab" role="tab" aria-selected="false" data-view="checklist">办事清单</button>
+      <button class="tab" role="tab" aria-selected="false" data-view="about">关于</button>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <div id="dataError" class="data-error" hidden></div>
+
+    <section id="view-qa" class="view is-active" role="tabpanel" aria-label="场景问答">
+      <div class="field-tabs" id="domainTabs">
+        <button class="field is-active" data-domain="job">求职知识</button>
+        <button class="field" data-domain="life">社会经验</button>
+      </div>
+
+      <div class="search-row">
+        <input id="qaSearch" type="search" placeholder="搜索问题或关键词，如：三方、押金" autocomplete="off" aria-label="搜索问答">
+      </div>
+
+      <div class="chips" id="categoryChips"></div>
+      <p class="list-meta" id="qaMeta"></p>
+      <div id="qaList" class="card-list"></div>
+    </section>
+
+    <section id="view-contract" class="view" role="tabpanel" aria-label="合同自检">
+      <div class="chips" id="checkerTabs"></div>
+      <p class="hint" id="checkerDesc"></p>
+      <form id="checkForm" class="check-list" novalidate></form>
+      <div class="actions">
+        <button id="btnScore" class="btn btn-primary" type="button">生成风险表</button>
+        <button id="btnReset" class="btn btn-ghost" type="button">清空重填</button>
+      </div>
+      <div id="resultBox" class="result" hidden></div>
+    </section>
+
+    <section id="view-checklist" class="view" role="tabpanel" aria-label="办事清单">
+      <div class="chips" id="checklistTabs"></div>
+      <p class="hint" id="clDesc"></p>
+      <div class="progress" aria-hidden="true"><div class="bar" id="clBar"></div></div>
+      <p class="list-meta" id="clMeta"></p>
+      <ul class="steps" id="clSteps"></ul>
+      <div class="actions">
+        <button id="clReset" class="btn btn-ghost" type="button">重置勾选</button>
+      </div>
+    </section>
+
+    <section id="view-about" class="view" role="tabpanel" aria-label="关于">
+      <div id="aboutBox"></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <div class="wrap">
+      <p id="footerNote">本应用仅供参考，不构成法律意见。</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

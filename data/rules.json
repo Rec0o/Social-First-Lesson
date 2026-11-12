@@ -1,0 +1,177 @@
+{
+  "version": "1.0",
+  "note": "示例数据：检查项与建议为占位内容，正式版本由内容团队替换。",
+  "checkers": [
+    {
+      "id": "sanfang",
+      "name": "三方协议自检",
+      "domain": "job",
+      "desc": "签约前逐项核对，重点看违约金与免责情形。",
+      "items": [
+        {
+          "id": "sf-01",
+          "question": "协议里是否写明违约金金额和触发条件？",
+          "risk_if_no": "high",
+          "advice": "签前必须谈清楚；升学、考公、服兵役等情形应争取写入免责条款。",
+          "source_ids": ["src-002", "src-005"]
+        },
+        {
+          "id": "sf-02",
+          "question": "升学、考公、服兵役、体检不合格是否列为免责情形？",
+          "risk_if_no": "high",
+          "advice": "逐条确认免责情形，口头承诺要求写进协议或补充条款。",
+          "source_ids": ["src-005"]
+        },
+        {
+          "id": "sf-03",
+          "question": "是否写清服务期、户口与档案去向、报到安排？",
+          "risk_if_no": "medium",
+          "advice": "档案与户口去向影响后续考公、落户，必须落到书面。",
+          "source_ids": ["src-005"]
+        },
+        {
+          "id": "sf-04",
+          "question": "是否明确入职岗位、工作地点与薪酬范围？",
+          "risk_if_no": "medium",
+          "advice": "岗位与地点模糊是后续调岗争议的常见起点。",
+          "source_ids": ["src-002"]
+        },
+        {
+          "id": "sf-05",
+          "question": "是否存在单方解除、自动续约等不合理条款？",
+          "risk_if_no": "medium",
+          "advice": "单方解除权对等性要看清，必要时要求补充协商条款。",
+          "source_ids": ["src-002"]
+        },
+        {
+          "id": "sf-06",
+          "question": "是否已取得单位盖章原件并留存本人签字页？",
+          "risk_if_no": "low",
+          "advice": "至少留存一份盖章原件或清晰扫描件，含双方签字盖章页。",
+          "source_ids": ["src-005"]
+        }
+      ]
+    },
+    {
+      "id": "labor",
+      "name": "劳动合同自检",
+      "domain": "job",
+      "desc": "重点看书面形式、必备条款、试用期与社保。",
+      "items": [
+        {
+          "id": "lb-01",
+          "question": "是否签订书面合同，且不晚于用工之日起一个月？",
+          "risk_if_no": "high",
+          "advice": "超期未签可主张二倍工资，注意保留用工证据。",
+          "source_ids": ["src-001"]
+        },
+        {
+          "id": "lb-02",
+          "question": "是否写明工作内容、工作地点、工时与休息休假？",
+          "risk_if_no": "high",
+          "advice": "工作地点过于宽泛（如“全国”）需谨慎，可能被用于随意调岗。",
+          "source_ids": ["src-001"]
+        },
+        {
+          "id": "lb-03",
+          "question": "是否写明劳动报酬数额、支付周期与支付方式？",
+          "risk_if_no": "high",
+          "advice": "口头约定的绩效与奖金，尽量在合同或附件中写明计算方式。",
+          "source_ids": ["src-001"]
+        },
+        {
+          "id": "lb-04",
+          "question": "是否约定由单位缴纳社会保险？",
+          "risk_if_no": "high",
+          "advice": "“自愿放弃社保”的约定无效，入职后核对实际参保记录。",
+          "source_ids": ["src-001", "src-003"]
+        },
+        {
+          "id": "lb-05",
+          "question": "是否存在扣押证件、收取押金或培训费的要求？",
+          "risk_if_no": "high",
+          "advice": "此类要求不合法，可直接拒绝并向劳动保障监察反映。",
+          "source_ids": ["src-001"]
+        },
+        {
+          "id": "lb-06",
+          "question": "试用期长度与工资是否符合法定上限？",
+          "risk_if_no": "medium",
+          "advice": "试用期最长六个月的适用有条件，工资不得低于约定工资的 80%。",
+          "source_ids": ["src-001"]
+        },
+        {
+          "id": "lb-07",
+          "question": "是否有竞业限制条款，且约定了经济补偿？",
+          "risk_if_no": "medium",
+          "advice": "只约定限制不给补偿的条款存在争议，签前明确补偿标准与期限。",
+          "source_ids": ["src-001"]
+        },
+        {
+          "id": "lb-08",
+          "question": "加班认定与加班费计算方式是否写明？",
+          "risk_if_no": "medium",
+          "advice": "明确加班审批与计费口径，日常保留打卡与加班沟通记录。",
+          "source_ids": ["src-001"]
+        }
+      ]
+    },
+    {
+      "id": "rent",
+      "name": "租房合同自检",
+      "domain": "life",
+      "desc": "重点看产权、押金、维修与退租条款。",
+      "items": [
+        {
+          "id": "rt-01",
+          "question": "出租人是否为产权人，或持有产权人的书面授权？",
+          "risk_if_no": "high",
+          "advice": "核对产权证明与身份证件，二房东需看到原合同与转租授权。",
+          "source_ids": ["src-002"]
+        },
+        {
+          "id": "rt-02",
+          "question": "是否写明押金金额、退还条件与退还时限？",
+          "risk_if_no": "high",
+          "advice": "退租条件与到账时间写清楚，交接时拍照留证。",
+          "source_ids": ["src-002"]
+        },
+        {
+          "id": "rt-03",
+          "question": "租金、支付周期、续租涨幅与逾期责任是否明确？",
+          "risk_if_no": "medium",
+          "advice": "避免“押一付三”外加口头涨租，涨幅应写进条款。",
+          "source_ids": ["src-002"]
+        },
+        {
+          "id": "rt-04",
+          "question": "维修责任与费用分担是否写明？",
+          "risk_if_no": "medium",
+          "advice": "区分自然损耗与人为损坏，约定报修响应时间。",
+          "source_ids": ["src-002"]
+        },
+        {
+          "id": "rt-05",
+          "question": "提前退租、转租、续租的条款是否明确？",
+          "risk_if_no": "medium",
+          "advice": "提前退租的违约责任（扣押金/付违约金）要提前算清。",
+          "source_ids": ["src-002"]
+        },
+        {
+          "id": "rt-06",
+          "question": "是否附房屋与设施清单，并记录当前状态？",
+          "risk_if_no": "low",
+          "advice": "入住当天拍照并附清单，退租时才有对照依据。",
+          "source_ids": ["src-002"]
+        },
+        {
+          "id": "rt-07",
+          "question": "水电燃气物业费的承担与结算方式是否写明？",
+          "risk_if_no": "low",
+          "advice": "入住与退租均抄表留底，保留缴费凭证。",
+          "source_ids": ["src-002"]
+        }
+      ]
+    }
+  ]
+}

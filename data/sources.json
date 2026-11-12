@@ -1,0 +1,47 @@
+{
+  "version": "1.0",
+  "sources": [
+    {
+      "id": "src-001",
+      "name": "《中华人民共和国劳动合同法》",
+      "url": "",
+      "publisher": "全国人民代表大会常务委员会",
+      "effective_date": "2013-07"
+    },
+    {
+      "id": "src-002",
+      "name": "《中华人民共和国民法典》",
+      "url": "",
+      "publisher": "全国人民代表大会",
+      "effective_date": "2021-01"
+    },
+    {
+      "id": "src-003",
+      "name": "《中华人民共和国社会保险法》",
+      "url": "",
+      "publisher": "全国人民代表大会常务委员会",
+      "effective_date": "2011-07"
+    },
+    {
+      "id": "src-004",
+      "name": "《中华人民共和国劳动争议调解仲裁法》",
+      "url": "",
+      "publisher": "全国人民代表大会常务委员会",
+      "effective_date": "2008-05"
+    },
+    {
+      "id": "src-005",
+      "name": "高校就业指导中心常见口径",
+      "url": "",
+      "publisher": "校内就业指导部门",
+      "effective_date": "2026-09"
+    },
+    {
+      "id": "src-006",
+      "name": "参保地医保局公开办事指南",
+      "url": "",
+      "publisher": "地方医疗保障局",
+      "effective_date": "2026-09"
+    }
+  ]
+}
